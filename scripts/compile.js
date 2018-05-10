@@ -12,12 +12,7 @@ var specs =  {
     'modified': process.argv.slice(2)[2] ? process.argv.slice(2)[2] : 'none'
 };
 
-if (config.data.id !== "") {
-    var getData = require('../scripts/helpers/data.js');
-    var data = getData();
-} else {
-    data = {};
-}
+var data = {};
 
 var path = '.build/';
 var version = 'v/' + Date.now();

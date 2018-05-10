@@ -6,47 +6,10 @@ var config = require('../config.json');
 var userHome = require('user-home');
 var keys = require(userHome + '/.gu/interactives.json');
 
-var json,
-    data = {regions: {}},
-    conferences = [];
-
-function fetchData(callback) {
-    gsjson({
-        spreadsheetId: config.data.id,
-        allWorksheets: true,
-        credentials: keys.google
-    })
-    .then(function(result) {
-        callback(result);
-    })
-    .then(function(err) {
-        if (err) {
-            console.log(err);
-        }
-    });
-}
-
-function setSheetNames(data) {
-    data = {
-        'events': data[0]
-    }
-
-    return data;
-}
+var data = {};
 
 module.exports = function getData() {
-    var isDone = false;
-
-    fetchData(function(result) {
-        data = result;
-        data = setSheetNames(data);
-
-        isDone = true;
-    });
-
-    deasync.loopWhile(function() {
-        return !isDone;
-    });
+    data.hockey = JSON.parse(fs.readFileSync('./scripts/data/hockey.json', 'utf8'));
 
     return data;
 };
