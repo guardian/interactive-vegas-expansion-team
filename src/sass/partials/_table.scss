@@ -1,21 +1,29 @@
 .uit-table {
     width: 100%;
-    height: 600px;
     margin-bottom: 24px;
 
     .team {
         fill: $c-blue;
+        transition: 0.2s linear fill;
+
+        &:hover {
+            fill: $c-dark-blue;
+        }
     }
 
     .team.knights {
         fill: $c-brown;
+
+        &:hover {
+            fill: $c-dark-brown;
+        }
     }
 
     .team-name,
     .team-year {
         font-family: 'Guardian Sans Web';
         fill: $c-black;
-        text-anchor: start;
+        text-anchor: end;
         font-size: 14px;
         transform: translateY(11px);
     }
@@ -38,12 +46,68 @@
 
     .tick line {
         stroke: $c-light-grey;
+        transform: translateY(16px);
     }
 
-    .tick text {
+    .tick text,
+    .reference-tick__label {
         font-size: 14px;
         font-family: 'Guardian Sans Web';
         fill: $c-grey;
+        text-anchor: middle;
+    }
+
+    .reference-tick__line,
+    .reference-tick__label {
+        fill: $c-brown;
+    }
+}
+
+.uit-table.is-mobile {
+    .team-name {
         text-anchor: start;
     }
+
+    .team-year {
+        opacity: 0;
+    }
+
+    .tick line {
+        stroke: $c-off-white;
+    }
+
+    .team-percentage {
+        font-family: 'Guardian Sans Web';
+        font-size: 14px;
+        transform: translate(4px, 13px);
+    }
+}
+
+.uit-tables {
+    display: flex;
+    justify-content: space-between;
+
+    .uit-table {
+        width: 30%;
+
+        .tick:nth-of-type(n+3):nth-of-type(-n+5) text {
+            opacity: 0;
+        }
+    }
+}
+
+.uit-table__header {
+    font-size: 20px;
+    font-family: 'Guardian Egyptian Web';
+    font-weight: bold;
+    color: $c-black;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+p.uit-table__description {
+    font-size: 14px;
+    line-height: 1.3;
+    font-family: 'Guardian Sans Web';
+    color: $c-dark-grey;
 }
