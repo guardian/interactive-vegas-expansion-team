@@ -11,48 +11,71 @@ module.exports =  {
 
     createTable: function(target) {
         var $target = $(target);
-        var margin = {top: 20, left: 40, right: 0, bottom: 0};
-        var width = $target.width() - margin.left;
-        var height = $target.height() - margin.top;
+        var width = $target.width();
+        var height = $target.height();
 
         var svg = d3.select(target)
             .append('svg')
-            .attr('width', width + margin.left)
-            .attr('height', height + margin.top)
+            .attr('width', width)
+            .attr('height', height)
 
-        var x = d3.scaleBand()
-                .range([margin.left, width])
-                .paddingInner(0.1);
+        var margin = {top: 24, left: 160, right: 40, bottom: 10};
+            width = $target.width() - margin.left - margin.right;
+            height = $target.height() - margin.top - margin.bottom;
 
-        x.domain(data.hockey.map(function(d) { return d.Team }));
+        var y = d3.scaleBand()
+                .range([0, height])
+                .paddingInner(0.2);
 
-        var y = d3.scaleLinear()
-            .range([height, margin.top]);
+        var x = d3.scaleLinear()
+            .range([0, width]);
 
-        y.domain([0, 100]);
-
-        console.log(y);
+        y.domain(data.hockey.map(function(d) { return d.Team }));
+        x.domain([0, 100]);
 
         svg.append('g')
             .attr('class', 'grid-lines')
-            .call(d3.axisLeft(y)
+            .attr('transform', 'translate(' + margin.left + ', 0)')
+            .call(d3.axisTop(x)
                 .ticks(10)
-                .tickSize(-width)
+                .tickSize(-height)
                 .tickFormat(function(d) { return d + '%' })
             )
             .selectAll('.tick text')
-            .attr('y', -10)
-            .attr('x', 0)
+            .attr('y', 10)
+            .attr('x', 2)
 
-        svg.selectAll('g.team')
+        var graph = svg.append('g')
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+        var team = graph.selectAll('g.team')
             .data(data.hockey)
             .enter()
             .append('g')
-            .attr('class', function(d) { return 'team' + (d.Team == 'Vegas Golden Knights' ? ' knights' : '') })
-            .append('rect')
-            .attr('x', function(d) { return x(d.Team) })
-            .attr('y', function(d) { console.log(d); return y(d.Percentage) })
-            .attr('height', function(d) { return height - y(d.Percentage)})
-            .attr('width', x.bandwidth());
+            .attr('class', function(d) { return 'team' + (d.Team == 'Las Vegas Knights' ? ' knights' : '') });
+
+        team.append('text')
+            .attr('y', function(d) { return y(d.Team) })
+            .attr('x', -margin.left)
+            .attr('class', 'team-name')
+            .text(function(d) { return d.Team });
+
+        team.append('text')
+            .attr('y', function(d) { return y(d.Team) })
+            .attr('x', -margin.left)
+            .attr('class', 'team-year')
+            .text(function(d) { return d.Year });
+
+        team.append('text')
+            .attr('y', function(d) { return y(d.Team) })
+            .attr('x', function(d) { return x(d.Percentage) })
+            .attr('class', 'team-percentage')
+            .text(function(d) { return d.Percentage + '%' });
+
+        team.append('rect')
+            .attr('y', function(d) { return y(d.Team) })
+            .attr('x', 0)
+            .attr('width', function(d) { return x(d.Percentage) })
+            .attr('height', y.bandwidth());
     }
 };

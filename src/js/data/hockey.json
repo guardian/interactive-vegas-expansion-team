@@ -1,61 +1,76 @@
 [
   {
-    "Team": "Vegas Golden Knights",
+    "Year": 2017,
+    "Team": "Las Vegas Knights",
     "Percentage": 62.2
   },
   {
+    "Year": 2000,
     "Team": "Minnesota Wild",
     "Percentage": 30.49
   },
   {
+    "Year": 2000,
     "Team": "Columbus Blue Jackets",
     "Percentage": 34.15
   },
   {
+    "Year": 1999,
     "Team": "Atlanta Thrashers",
     "Percentage": 16.09
   },
   {
+    "Year": 1998,
     "Team": "Nashville Predators",
     "Percentage": 34.15
   },
   {
+    "Year": 1993,
     "Team": "Mighty Ducks of Anaheim",
     "Percentage": 39.29
   },
   {
+    "Year": 1992,
     "Team": "Tampa Bay Lightning",
     "Percentage": 27.38
   },
   {
+    "Year": 1992,
     "Team": "Ottawa Senators",
     "Percentage": 11.9
   },
   {
+    "Year": 1991,
     "Team": "San Jose Sharks",
     "Percentage": 21.25
   },
   {
+    "Year": 1974,
     "Team": "Kansas City Scouts",
     "Percentage": 18.75
   },
   {
+    "Year": 1974,
     "Team": "Washington Capitals",
     "Percentage": 10
   },
   {
+    "Year": 1972,
     "Team": "Atlanta Flames",
     "Percentage": 32.05
   },
   {
+    "Year": 1972,
     "Team": "New York Islanders",
     "Percentage": 15.38
   },
   {
+    "Year": 1970,
     "Team": "Buffalo Sabres",
     "Percentage": 30.77
   },
   {
+    "Year": 1970,
     "Team": "Vancouver Canucks",
     "Percentage": 30.77
   }
