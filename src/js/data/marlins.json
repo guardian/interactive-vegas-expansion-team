@@ -1,0 +1,37 @@
+[
+	{
+		"Season": 1993,
+		"Division": 6,
+		"NLDS": null,
+		"NLCS": null,
+		"WS": null
+	},
+	{
+		"Season": 1994,
+		"Division": 5,
+		"NLDS": null,
+		"NLCS": null,
+		"WS": null
+	},
+	{
+		"Season": 1995,
+		"Division": 4,
+		"NLDS": null,
+		"NLCS": null,
+		"WS": null
+	},
+	{
+		"Season": 1996,
+		"Division": 3,
+		"NLDS": null,
+		"NLCS": null,
+		"WS": null
+	},
+	{
+		"Season": 1997,
+		"Division": 2,
+		"NLDS": "Win",
+		"NLCS": "Win",
+		"WS": "Win"
+	}
+]

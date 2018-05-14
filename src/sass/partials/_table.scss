@@ -111,3 +111,67 @@ p.uit-table__description {
     font-family: 'Guardian Sans Web';
     color: $c-dark-grey;
 }
+
+.uit-charts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.uit-chart {
+    width: 48%;
+    margin-bottom: 24px;
+
+    .grid-lines .tick line,
+    .domain {
+        stroke: $c-light-grey;
+    }
+
+    .grid-lines .tick text {
+        display: none;
+        opacity: 0;
+    }
+}
+
+.uit-chart__season-year {
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    text-anchor: middle;
+    fill: $c-grey;
+}
+
+.uit-chart__season-label {
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    text-anchor: middle;
+    fill: $c-white;
+    transform: translate(0, 5px);
+}
+
+.uit-chart__season-marker {
+    fill: $c-blue;
+}
+
+.uit-chart__playoff-marker {
+    fill: $c-blue;
+}
+
+.uit-chart__playoff-marker--lost {
+    stroke: $c-blue;
+    stroke-width: 2;
+    fill: $c-white;
+}
+
+.uit-chart__rule {
+    fill: none;
+    stroke: $c-light-blue;
+    stroke-width: 2;
+}
+
+.uit-chart__league-label,
+.uit-chart__playoff-label {
+    font-family: 'Guardian Sans Web';
+    font-size: 14px;
+    text-anchor: middle;
+    fill: $c-grey;
+}

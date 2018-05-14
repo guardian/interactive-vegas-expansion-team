@@ -1,0 +1,44 @@
+[
+	{
+		"Season": 1968,
+		"Division": 7,
+		"NLDS": null,
+		"NLCS": null,
+		"WS": null
+	},
+	{
+		"Season": 1969,
+		"Division": 2,
+		"NLDS": "Win",
+		"NLCS": "Lost",
+		"WS": null
+	},
+	{
+		"Season": 1970,
+		"Division": 1,
+		"NLDS": "Win",
+		"NLCS": "Win",
+		"WS": "Win"
+	},
+	{
+		"Season": 1971,
+		"Division": 1,
+		"NLDS": "Win",
+		"NLCS": "Lost",
+		"WS": null
+	},
+	{
+		"Season": 1972,
+		"Division": 1,
+		"NLDS": "Lost",
+		"NLCS": null,
+		"WS": null
+	},
+	{
+		"Season": 1973,
+		"Division": 1,
+		"NLDS": "Win",
+		"NLCS": "Win",
+		"WS": "Lost"
+	}
+]
