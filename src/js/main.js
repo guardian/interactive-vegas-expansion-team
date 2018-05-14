@@ -2,7 +2,5 @@
 window.$ = require('./vendor/jquery.js');
 
 var share = require('./modules/share.js');
-var tables = require('./modules/tables.js');
 
 share.init();
-tables.init();
