@@ -84,9 +84,6 @@ module.exports =  {
             .attr('y', 12)
             .attr('x', 0)
 
-        var graph = svg.append('g')
-            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
         if ($target.data('ref')) {
             var ref = svg.append('g')
                 .attr('class', 'reference-tick')
@@ -102,6 +99,9 @@ module.exports =  {
                 .attr('class', 'reference-tick__label')
                 .text('Knights')
         }
+
+        var graph = svg.append('g')
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
         var team = graph.selectAll('g.team')
             .data(data[dataType])
