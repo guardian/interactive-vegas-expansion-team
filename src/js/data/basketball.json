@@ -1,1 +1,27 @@
-[{"Year":1970,"Team":"Portland Trail Blazers","Percentage":35.37},{"Year":1968,"Team":"Milwaukee Bucks","Percentage":32.93},{"Year":1974,"Team":"New Orleans Jazz","Percentage":28.05},{"Year":1989,"Team":"Minnesota Timberwolves","Percentage":26.83},{"Year":1970,"Team":"Buffalo Braves","Percentage":26.83}]
+[
+  {
+    "Year": 1970,
+    "Team": "Portland Trail Blazers",
+    "Percentage": 35.4
+  },
+  {
+    "Year": 1968,
+    "Team": "Milwaukee Bucks",
+    "Percentage": 32.9
+  },
+  {
+    "Year": 1974,
+    "Team": "New Orleans Jazz",
+    "Percentage": 28.1
+  },
+  {
+    "Year": 1989,
+    "Team": "Minnesota Timberwolves",
+    "Percentage": 26.8
+  },
+  {
+    "Year": 1970,
+    "Team": "Buffalo Braves",
+    "Percentage": 26.8
+  }
+]

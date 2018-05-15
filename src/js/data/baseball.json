@@ -1,1 +1,27 @@
-[{"Year":1961,"Team":"Los Angeles Angels","Percentage":43.48},{"Year":1969,"Team":"Kansas City Royals","Percentage":42.59},{"Year":1993,"Team":"Colorado Rockies","Percentage":41.36},{"Year":1998,"Team":"Arizona Diamondbacks","Percentage":40.12},{"Year":1962,"Team":"Houston Colt .45s","Percentage":40}]
+[
+  {
+    "Year": 1961,
+    "Team": "Los Angeles Angels",
+    "Percentage": 43.5
+  },
+  {
+    "Year": 1969,
+    "Team": "Kansas City Royals",
+    "Percentage": 42.6
+  },
+  {
+    "Year": 1993,
+    "Team": "Colorado Rockies",
+    "Percentage": 41.4
+  },
+  {
+    "Year": 1998,
+    "Team": "Arizona Diamondbacks",
+    "Percentage": 40.1
+  },
+  {
+    "Year": 1962,
+    "Team": "Houston Colt .45s",
+    "Percentage": 40
+  }
+]

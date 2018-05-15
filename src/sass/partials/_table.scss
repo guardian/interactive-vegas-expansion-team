@@ -116,6 +116,16 @@ p.uit-table__description {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    .uit-chart {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+
+        .uit-table__description {
+            flex-grow: 2;
+        }
+    }
 }
 
 .uit-chart {
