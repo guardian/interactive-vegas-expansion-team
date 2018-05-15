@@ -1,5 +1,5 @@
 var pageUrl = window.location.href.split('#')[0],
-    shareCopy = 'What a cool article #Article';
+    shareCopy = 'Why the Golden Knights are the best expansion team in all of sports';
 
 module.exports =  {
     init: function() {
