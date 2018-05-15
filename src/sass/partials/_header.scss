@@ -3,22 +3,59 @@
 }
 
 .uit-header__headline {
-    padding: 6px 0;
+    margin: 0;
     font-family: 'Guardian Egyptian Web';
     font-weight: 700;
-    font-size: 24px;
-    line-height: 1.1;
+    font-size: 9vw;
+    line-height: .9;
+    color: $c-blue;
 
     @include mq(tablet) {
-        font-size: 48px;
+        font-size: 58px;
+    }
+
+    @include mq(desktop) {
+        font-size: 82px;
+    }
+
+    @include mq(leftCol) {
+        font-size: 94px;
     }
 }
 
-.uit-header__headline-kicker {
-    display: block;
-    color: $c-blue;
-    font-weight: 500;
-    font-style: italic;
+.uit-header__headline--start {
+    padding-top: 12px;
+
+    @include mq(desktop) {
+        padding-top: 24px;
+    }
+}
+
+.uit-header__headline--end {
+    text-align: right;
+    padding-bottom: 24px;
+}
+
+.uit-header__image {
+    width: 100%;
+    max-width: 922px;
+    margin-top: -5%;
+
+    @include mq(tablet) {
+        margin-top: -4%;
+    }
+
+    @include mq(desktop) {
+        margin-top: -3.5%;
+    }
+
+    @include mq(leftCol) {
+        margin-left: 140px;
+    }
+
+    @include mq(wide) {
+        margin-left: 216px;
+    }
 }
 
 .uit-header__standfirst {
