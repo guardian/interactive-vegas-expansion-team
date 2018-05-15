@@ -84,14 +84,20 @@
 }
 
 .uit-tables {
-    display: flex;
-    justify-content: space-between;
+    .tick:nth-of-type(4) text {
+        opacity: 0;
+    }
 
-    .uit-table {
-        width: 30%;
+    @include mq(mobileLandscape) {
+        display: flex;
+        justify-content: space-between;
 
-        .tick:nth-of-type(n+3):nth-of-type(-n+5) text {
-            opacity: 0;
+        .uit-table {
+            width: 30%;
+
+            .tick:nth-of-type(n+3):nth-of-type(-n+5) text {
+                opacity: 0;
+            }
         }
     }
 }
@@ -102,6 +108,7 @@
     font-weight: bold;
     color: $c-black;
     line-height: 1.2;
+    margin: 0;
     margin-bottom: 4px;
 }
 
@@ -113,23 +120,25 @@ p.uit-table__description {
 }
 
 .uit-charts {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    .uit-chart {
+    @include mq(mobileLandscape) {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 24px;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
-        .uit-table__description {
-            flex-grow: 2;
+        .uit-chart {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 24px;
+            width: 48%;
+
+            .uit-table__description {
+                flex-grow: 2;
+            }
         }
     }
 }
 
 .uit-chart {
-    width: 48%;
     margin-bottom: 24px;
 
     .grid-lines .tick line,
